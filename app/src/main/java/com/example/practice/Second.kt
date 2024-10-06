@@ -17,12 +17,13 @@ class Second : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
+        val message2=intent.getStringExtra("Extra")
         // Initialize the TextView
         textView = findViewById(R.id.loggedin)
         button= findViewById(R.id.button2)
         videoView = findViewById(R.id.videoView)
         // Set the message to the TextView
-        val message = "You are Logged in"
+        val message = "You are Logged in: $message2"
         textView.text = message
         button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
